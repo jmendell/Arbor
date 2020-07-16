@@ -1,0 +1,115 @@
+{
+    "key": "group_5df7cd0c80fa0",
+    "title": "Get Started Content",
+    "fields": [
+        {
+            "key": "field_5e31c50402ca7",
+            "label": "Related Content Text",
+            "name": "related_content_text",
+            "type": "text",
+            "instructions": "This is the text that appears above related articles in the Get Started flow.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "HELPFUL INFO BASED ON YOUR INTERESTS",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5df7cd17e6ce6",
+            "label": "Related Content",
+            "name": "related_content",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "table",
+            "button_label": "Add Related Content",
+            "sub_fields": [
+                {
+                    "key": "field_5df7cd3f34d85",
+                    "label": "Category",
+                    "name": "category",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "Financial & Retirement Planning": "Financial & Retirement Planning",
+                        "Investment Services": "Investment Services",
+                        "Tax Estate & Planning": "Tax Estate & Planning",
+                        "Long Term Care Services": "Long Term Care Services",
+                        "Rollover Questions": "Rollover Questions",
+                        "Social Security Planning": "Social Security Planning",
+                        "Not Sure Yet": "Not Sure Yet",
+                        "Meeting": "Meeting"
+                    },
+                    "default_value": [],
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "return_format": "label",
+                    "ajax": 0,
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_5df7cd5234d86",
+                    "label": "Content",
+                    "name": "content",
+                    "type": "post_object",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "post_type": "",
+                    "taxonomy": "",
+                    "allow_null": 0,
+                    "multiple": 1,
+                    "return_format": "object",
+                    "ui": 1
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-options-get-started"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1580322913
+}

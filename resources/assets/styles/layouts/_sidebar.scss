@@ -1,0 +1,12 @@
+#sidebar {
+  .widget {
+    @apply mb-12 bg-arbor-light_gray p-6;
+  }
+
+  h2, h3 {
+    @apply mb-3 text-lg;
+    font-family: 'DINNextLTPro-Medium';
+    font-weight: normal;
+    font-style: normal;
+  }
+}

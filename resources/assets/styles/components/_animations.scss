@@ -1,0 +1,207 @@
+.menu-item{
+  @apply relative flex flex-col;
+  &:after{
+    content:'';
+    height:2px;
+    width:100%;
+    position:absolute;
+    background-color: $aqua;
+    bottom:-5px;
+    transform:scaleX(0);
+    transition:.4s;
+  }
+  &:hover{
+    &:after{
+      transform:scaleX(1);
+    }
+  }
+}
+
+.current-menu-item{
+    @apply relative flex flex-col;
+  &:after{
+    content:'';
+    height:2px;
+    width:100%;
+    transform:scaleX(1);
+    position:absolute;
+    background-color: $aqua;
+    bottom:-5px;
+  }
+}
+
+
+.footer-top{
+  .menu-item{
+    @apply relative flex flex-col;
+    &:after{
+      @apply hidden;
+    }
+  }
+}
+
+// home hero pattren bg
+.background-pattern--full{
+  @apply absolute;
+  bottom:-100%;
+  transition:1s;
+  transition-delay:.2s;
+  &.animate__slide-up{
+    bottom:0;
+  }
+}
+
+// animates element from right and fades in
+.animation__image-slide-from-right{
+  right:-100px;
+  opacity:0;
+}
+
+
+.animation__slide-up{
+  position:relative;
+  opacity:0;
+  bottom:-100px;
+  transition:bottom .8s ease;
+  transition-delay:0;
+  &.element-in-view{
+    opacity:1;
+    bottom:0;
+  }
+}
+
+.animation__slide-up--delayed{
+  position:relative;
+  opacity:0;
+  bottom:-100px;
+  transition:bottom .8s ease, opacity .8s ease;
+  transition-delay:.5s;
+  &.element-in-view{
+    opacity:1;
+    bottom:0;
+  }
+}
+
+// class for using ScrollMagic to slide up text
+.animation__slide-up--scroll{
+  position:relative;
+  opacity:0;
+  bottom:-100px;
+  transition:bottom .8s ease, opacity .8s ease;
+  transition-delay:0;
+  &.element-in-view{
+    opacity:1;
+    bottom:0;
+  }
+}
+
+// team hero strategy block
+.animation__slide-up--strategy-block{
+  bottom:-50px;
+  opacity:0;
+  transition:bottom .8s ease, opacity .2s ease;
+  &.element-in-view{
+    opacity:1;
+    bottom:50px;
+  }
+}
+
+// for buttons to animate. This avoids transition conflicts.
+.button-slide-up{
+  position:relative;
+  opacity:0;
+  bottom:-100px;
+  &.element-in-view{
+    opacity:1;
+    bottom:0;
+  }
+}
+
+// Elements fade in when scrolled over
+.animate__fade-in{
+  opacity:0;
+  transition:.8s;
+  &.element-in-view{
+    opacity:1;
+  }
+}
+
+// Elements fade in but with a delay
+.animate__fade-in--delayed{
+  opacity:0;
+  transition:.8s;
+  transition-delay:.3s;
+  &.element-in-view{
+    opacity:1;
+  }
+}
+
+.animation__slide-in-from-right{
+  right:-150px;
+  opacity:0;
+  transition:.8s;
+  &.element-in-view{
+    right:0;
+    opacity:1;
+  }
+}
+
+.animation__slide-in-from-left{
+  position: relative;
+  left:-150px;
+  opacity:0;
+  transition:.8s;
+  &.element-in-view{
+    left:0;
+    opacity:1;
+  }
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+
+  .animation__slide-in-from-left{
+    left:0;
+    opacity:1;
+  }
+
+  .animation__slide-in-from-right{
+    right:0;
+    opacity:1;
+  }
+
+  .animate__fade-in--delayed, .animate__fade-in{
+    opacity:1;
+  }
+
+  .button-slide-up{
+    opacity:1;
+    bottom:0;
+  }
+
+  .animation__slide-up{
+    opacity:1;
+    bottom:0;
+  }
+
+  .animation__slide-up--delayed{
+    opacity:1;
+    bottom:0;
+  }
+
+  // class for using ScrollMagic to slide up text
+  .animation__slide-up--scroll{
+    opacity:1;
+    bottom:0;
+  }
+
+  // team hero strategy block
+  .animation__slide-up--strategy-block{
+    opacity:1;
+    bottom:50px;
+  }
+
+  .guy-round{
+    left:20%;
+  }
+
+}

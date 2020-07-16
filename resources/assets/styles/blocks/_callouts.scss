@@ -1,0 +1,237 @@
+// general text/image callout styles
+.text-graphic{
+
+  .text-graphic-inner{
+    @apply flex;
+    @screen smd {
+      @apply items-center;
+    }
+
+    &.flex-col-reverse{
+      .image-container{
+        @apply mb-4;
+      }
+    }
+
+    .copy-container{
+      @apply w-full px-6 mb-4 leading-relaxed;
+      @screen smd {
+        @apply px-30;
+      }
+      @screen md {
+        @apply w-1/2;
+        padding: 0 60px 0 120px;
+      }
+      .content-title{
+        @apply text-3xl text-arbor-aqua mb-5;
+        @extend .swift-book;
+      }
+    }
+    .image-container{
+      @apply relative flex w-full;
+      img{
+        @apply z-10;
+      }
+      @screen md {
+        @apply w-1/2;
+      }
+      svg{
+        position:absolute;
+        z-index:1;
+        top:0;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
+
+// styles for callout block with image scaled down and centered
+.callout--img-sm-center{
+
+  .image-below__mobile{
+    @apply flex-col;
+    @screen md {
+      @apply flex-row;
+    }
+    .copy-container{
+      @apply mb-10;
+      @screen md {
+        @apply mb-0;
+      }
+    }
+  }
+
+  .image-above__mobile{
+    @apply flex-col-reverse;
+    @screen md {
+      @apply flex-row;
+    }
+    .copy-container{
+      @apply mt-10;
+      @screen md {
+        @apply mt-0;
+      }
+    }
+  }
+
+  .text-graphic-inner{
+
+    .copy-container{
+      @screen md {
+        @apply mb-0;
+      }
+    }
+    .image-container{
+      @apply justify-center;
+      .section-image{
+        @apply relative h-full;
+        width:70%;
+        @screen md {
+          width:60%;
+        }
+      }
+    }
+  }
+}
+
+// image is full width and flush with the edge of container
+.callout--img-full{
+
+  .image-below__mobile{
+    @apply flex-col;
+    @screen md {
+      @apply flex-row;
+    }
+    .copy-container{
+      @apply mb-10;
+      @screen md {
+        @apply mb-0;
+      }
+    }
+  }
+
+  .image-above__mobile{
+    @apply flex-col-reverse;
+    @screen md {
+      @apply flex-row;
+    }
+    .copy-container{
+      @apply mt-10;
+      @screen md {
+        @apply mt-0;
+      }
+    }
+  }
+
+  .image-container{
+    @apply flex justify-end w-full;
+    @screen smd {
+      // @apply w-1/2;
+    }
+    img{
+      @apply h-full w-full;
+    }
+  }
+}
+
+.get-started-block{
+  .background-pattern{
+    @apply absolute left-0 w-full h-full;
+    top:50%;
+    transform:translateY(-50%);
+  }
+
+  &.bg-white{
+    .section-title{
+      @apply text-arbor-aqua;
+    }
+  }
+  &.bg-aqua{
+    @apply bg-arbor-aqua;
+    .background-pattern{
+      @apply hidden;
+    }
+    .section-title{
+      @apply text-white;
+    }
+  }
+}
+
+// logo and text callo
+.logo-info-container{
+  @apply pb-60 items-center flex-col;
+  @screen md {
+    @apply pr-75 py-60;
+    &.callout--logo-left{
+      @apply flex-row;
+      .background-pattern{
+        left:0;
+      }
+    }
+    &.callout--logo-right{
+      @apply flex-row-reverse;
+      .background-pattern{
+        right:0;
+      }
+    }
+
+  }
+  .image-container{
+    @apply pb-75 relative flex justify-center;
+    @screen md {
+      @apply w-1/2 py-200 pr-100 justify-end;
+    }
+    .background-pattern{
+      @apply hidden;
+      @screen md {
+        @apply block absolute h-full w-3/4 top-0;
+      }
+    }
+    .logo-condensed{
+      z-index:5;
+      width:150px;
+      @screen md{
+        width:200px;
+      }
+    }
+  }
+}
+
+// Team page callout with an image of the group of owners
+.team__text-graphic{
+
+  .team__text-graphic-inner{
+    @apply flex flex-col items-center pt-60;
+    @screen md {
+      @apply flex-row-reverse px-60 pt-0;
+    }
+
+    .image-container{
+      @apply pt-6 flex justify-center;
+      @screen md {
+        @apply pt-60 justify-end;
+      }
+      img{
+        width:75%;
+        height:100%;
+      }
+    }
+
+    .copy-container{
+      .content-copy{
+        @apply text-white;
+      }
+    }
+  }
+}
+
+// Resources page
+
+.resources-text-graphic-container{
+  .section-image{
+    width:100%;
+    max-width:400px;
+    height:100%;
+  }
+}

@@ -1,0 +1,238 @@
+.team{
+  h1, h2{
+    font-family: 'SwiftNeueLTPro-Book';
+    font-weight: normal;
+    font-style: normal;
+  }
+}
+
+.strategy-block{
+  @apply flex flex-col items-center;
+  .colored-line{
+    height:5px;
+    width:50px;
+  }
+}
+
+.experience-list-container{
+  .list-inner{
+    top:-50px;
+    @screen md {
+      top:initial;
+      bottom:-10%;
+    }
+    .experience-list-item{
+      @apply mb-3;
+      .list-item-copy{
+        @apply text-white mb-3;
+      }
+      .colored-line--sm{
+        height:3px;
+        width:25px;
+      }
+
+      &:last-child{
+        .colored-line--sm{
+          @apply hidden;
+        }
+      }
+    }
+  }
+}
+
+.testimonial-container{
+  @apply relative pt-75 mb-120;
+  @screen md {
+    @apply pt-125 pb-100;
+  }
+  background-size:cover;
+  background-position:center;
+  &:after{
+    content:"";
+    @apply absolute bg-arbor-orange top-0 left-0 h-full w-full;
+    opacity:.7;
+    z-index:1;
+  }
+  .testimonial-title-section{
+    @apply text-center relative text-white mb-8;
+    z-index:5;
+    .testimonial-title{
+      @apply text-3xl;
+      @extend .swift-book;
+    }
+    .testimonial-subtitle{
+      @apply text-lg;
+      @extend .dinn-light;
+    }
+  }
+  .testimonial-slider{
+    z-index:5;
+    max-width:1440px;
+    margin:0 auto;
+    .slider-button{
+      position:relative;
+      z-index:2;
+      background:$navy;
+      cursor:pointer;
+      transition:.2s;
+      height:60px;
+      width:60px;
+      position:absolute;
+      bottom:-60px;
+      @screen md {
+        top:30%;
+        transform:translateY(-50%);
+      }
+      &:hover{
+        background:rgba(255,255,255,.3);
+      }
+      &.prev{
+        .button-inner{
+          left:60%;
+        }
+        &:hover{
+          .button-inner{
+            left:47%
+          }
+        }
+      }
+      &.next{
+        right:0;
+        .button-inner{
+          left:40%;
+        }
+        &:hover{
+          .button-inner{
+            left:52%;
+          }
+        }
+      }
+      .button-inner{
+        position:absolute;
+        height:20px;
+        width:45px;
+        transition:.5s;
+        position:absolute;
+        top:50%;
+        // left:50%;
+        transform:translateX(-50%)translateY(-50%);
+      }
+      .arrow{
+        position:absolute;
+        top:0;
+        height:20px;
+        width:20px;
+        &:before, &:after{
+          content:'';
+          display:block;
+          position:absolute;
+          border-radius:3px;
+          height:20px;
+          width:20px;
+        }
+        &.prev{
+          left:0;
+          border-left:5px solid $orange;
+          border-bottom:5px solid $orange;
+          border-radius:3px;
+          transform:rotate(45deg);
+        }
+        &.next{
+          right:0;
+          border-right:5px solid $orange;
+          border-top:5px solid $orange;
+          border-radius:3px;
+          transform:rotate(45deg);
+        }
+      }
+      .center-line{
+        height:4px;
+        width:70%;
+        background: $orange;
+        border-radius:3px;
+        position:absolute;
+        top:50%;
+        left:60%;
+        transform:translateX(-50%)translateY(-50%);
+        &.center-prev{
+          left:40%;
+        }
+      }
+    }
+  }
+
+    .testimonial-single{
+      @apply relative;
+      .slide-inner{
+        @apply text-center text-white relative text-lg;
+        @extend .dinn-light;
+        z-index:2;
+        @screen md{
+          @apply w-2/3 my-0 mx-auto;
+        }
+        .testimonial-author{
+          @extend .dinn-med;
+        }
+      }
+    }
+
+}
+
+.team-member-info-container{
+  @apply mx-6 mb-120;
+  @screen md{
+    @apply mx-0;
+  }
+  .member-single{
+    @apply flex flex-col-reverse items-center my-0 mx-auto mb-60;
+    justify-content: space-between;
+    @screen md{
+      @apply flex-row w-4/5;
+    }
+
+    &:nth-child(odd){
+      @screen md{
+        @apply mb-75;
+        .member-info-container{
+          @apply pr-4;
+        }
+      }
+    }
+    &:nth-child(even){
+      @screen md{
+        @apply flex-row-reverse;
+        @apply mb-75;
+        .member-info-container{
+          @apply pl-4;
+        }
+      }
+    }
+    &:last-child{
+      @screen md{
+        @apply mb-0;
+      }
+    }
+
+    .member-image-container{
+      @apply flex justify-center bg-arbor-light_gray overflow-hidden mb-8 relative;
+      border-radius: 250px;
+      width: 250px;
+      height: 250px;
+      @screen md {
+        @apply relative;
+        width: 300px;
+        height: 300px;
+      }
+      img{
+        width: 70%;
+        position: absolute;
+        bottom: 0%;
+      }
+    }
+    .social-icon--member{
+      width:25px;
+      fill:#C96114;
+    }
+  }
+}
+

@@ -1,0 +1,63 @@
+body.no-scroll{
+  overflow:hidden;
+}
+.mobile-menu-header{
+  @apply flex justify-between items-center py-6 px-4;
+  flex:1;
+  .logo-full{
+    width:150px;
+    @screen md {
+      width:175px;
+    }
+  }
+  .close{
+    @apply hidden;
+    font-size:50px;
+    line-height:.5;
+  }
+}
+.mobile-menu{
+  @apply absolute bg-white h-screen w-screen z-10;
+  top:0;
+  @screen md {
+    @apply hidden;
+  }
+
+  &.menu-scroll{
+    overflow-y:scroll;
+  }
+
+  .mobile-inner{
+    @apply absolute w-full;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    .menu-items{
+      @apply mb-6;
+      a {
+        @apply my-3 text-xl text-arbor-navy uppercase;
+        @extend .dinn-med;
+      }
+    }
+
+    .nav-action-buttons{
+      @apply mb-4;
+      .header-button{
+        @apply mb-4;
+      }
+    }
+  }
+
+  .social-container{
+    .social-icon--footer{
+      @apply mr-4 opacity-25;
+      width:20px;
+      fill:$med_gray;
+
+      &:hover {
+        @apply opacity-100;
+      }
+    }
+  }
+}

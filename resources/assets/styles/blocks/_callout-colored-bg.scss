@@ -1,0 +1,162 @@
+// callout with colored bg - small
+.colored-content-block{
+
+  .content-inner{
+    @apply flex;
+
+    .image-container{
+      img{
+        position: relative;
+        bottom: 0;
+        height:100%;
+        @screen md {
+          height:initial;
+        }
+      }
+    }
+
+    &.align-image-left{
+      @apply flex-col-reverse;
+      @screen md {
+        @apply flex-row;
+      }
+      .image-container{
+        img{
+          @screen md{
+            position:absolute;
+            left:-25px;
+          }
+        }
+      }
+      .copy-container{
+        @apply pt-60;
+        @screen md{
+          padding:100px 0;
+          @apply pr-60 text-right;
+        }
+      }
+    }
+
+    &.align-image-right{
+      @apply flex-col-reverse;
+      @screen md {
+        @apply flex-row-reverse;
+      }
+      .image-container{
+        img{
+          @screen md{
+            position: absolute;
+            right:0;
+          }
+        }
+      }
+      .copy-container{
+        @apply pt-60;
+        @screen md{
+          padding:100px 0;
+          @apply pl-60 text-left;
+        }
+      }
+    }
+
+    //Text color based on bg color
+    &.bg-arbor-orange{
+      .copy-container{
+        @apply text-white;
+
+        .section-button{
+          @extend .button--white;
+          @extend .btn-hover--white;
+        }
+      }
+    }
+    &.bg-arbor-aqua{
+      .copy-container{
+        @apply text-arbor-navy;
+        .section-button{
+          @extend .button--navy;
+          @extend .btn-hover--navy;
+        }
+      }
+    }
+  }
+
+}
+
+// orange callout on home
+[data-block_5df180bdb83dd]{
+  .copy-container{
+    a{
+      @extend .btn-hover--white;
+    }
+  }
+  .image-container{
+    @apply flex justify-center;
+    @screen md {
+      @apply block;
+    }
+    img{
+      width:80%;
+      @screen smd {
+        width:60%;
+      }
+      @screen md {
+        max-width:500px;
+        width:100%;
+      }
+    }
+  }
+}
+
+// Aqua callout on home
+[data-block_5df18166b83de]{
+  .copy-container{
+    a{
+      @extend .btn-hover--navy;
+    }
+  }
+  .image-container{
+    @apply flex justify-center;
+    @screen md {
+      @apply block;
+      max-width:50%;
+    }
+    img{
+      width:80%;
+      @screen smd {
+        width:60%;
+      }
+      @screen md {
+        width:80%;
+      }
+    }
+  }
+}
+
+// Full Width callout with colored background
+.callout--bg-color{
+  @apply mt-0 pt-60;
+  .text-graphic-inner{
+    @apply flex-col;
+    @screen md {
+      @apply flex-row-reverse;
+    }
+    .copy-container{
+      .content-title{
+        @apply text-arbor-navy;
+      }
+    }
+    .image-container{
+      @apply relative;
+      bottom:-30px;
+      @screen md {
+        @apply justify-start;
+        bottom:-15px;
+      }
+      .section-image{
+        @apply w-full h-full;
+      }
+    }
+  }
+
+}

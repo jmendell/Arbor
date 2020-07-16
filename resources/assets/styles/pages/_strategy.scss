@@ -1,0 +1,143 @@
+.strategy-text-graphic{
+
+  .text-graphic-inner{
+    @apply flex flex-col;
+    @screen smd {
+      @apply flex-row items-center flex-row;
+    }
+
+    .copy-container{
+      @apply w-full px-4 mb-4;
+      @screen smd {
+        @apply w-1/2 px-30;
+      }
+      @screen md {
+        padding: 0 60px 0 120px;
+      }
+      .content-title{
+        @apply text-3xl text-arbor-aqua mb-5;
+        @extend .swift-book;
+      }
+    }
+    .image-container{
+      @apply flex justify-end w-full;
+      @screen smd {
+        @apply w-1/2;
+      }
+    }
+  }
+}
+
+.colored-boxes{
+  @apply flex flex-col;
+  @screen md {
+    @apply flex-row;
+  }
+  .single-colored-box{
+    @apply relative h-full flex items-center justify-center;
+    background-repeat:no-repeat;
+    background-size:cover;
+    height:400px;
+    @screen md {
+      height:550px;
+    }
+    &:after{
+      content:'';
+      position:absolute;
+      top:0;
+      left:0;
+      z-index:1;
+      opacity:.8;
+      @apply h-full w-full;
+    }
+
+    &.orange-box{
+      .box-title{
+        @apply text-white text-3xl mb-6;
+        @extend .swift-book;
+      }
+      .box-copy{
+        @apply text-white text-base mb-8;
+      }
+      &:after{
+        @apply bg-arbor-orange;
+      }
+    }
+
+    &.aqua-box{
+      .box-title{
+        @apply text-arbor-navy text-3xl mb-4;
+        @extend .swift-book;
+      }
+      .box-copy{
+        @apply text-arbor-navy text-base mb-8;
+      }
+      &:after{
+        @apply bg-arbor-aqua;
+      }
+    }
+
+    .box-inner{
+      @apply px-30 py-60 z-10 relative;
+      @screen md{
+        @apply py-150 px-120;
+      }
+    }
+  }
+}
+
+.strategy-text-graphic--colored{
+  @apply bg-arbor-med_gray mt-0 pt-60;
+  .text-graphic-inner{
+    @apply flex-col;
+    @screen md {
+      @apply flex-row-reverse;
+    }
+    .copy-container{
+      .content-title{
+        @apply text-arbor-navy;
+      }
+    }
+    .image-container{
+      @apply relative;
+      bottom:-30px;
+      @screen md {
+        @apply justify-start;
+        bottom:-15px;
+      }
+      .section-image{
+        @apply w-full;
+      }
+    }
+  }
+
+}
+
+.strategy-text-graphic--woman{
+  .text-graphic-inner{
+    .copy-container{
+      @apply mb-6;
+      @screen md {
+        @apply mb-0;
+      }
+    }
+    .image-container{
+      @apply justify-center relative;
+      svg{
+        position:absolute;
+        z-index:1;
+        top:10%;
+        width: 100%;
+        height: 70%;
+      }
+      .section-image{
+        @apply relative;
+        width:70%;
+        z-index:5;
+        @screen md {
+          width:60%;
+        }
+      }
+    }
+  }
+}

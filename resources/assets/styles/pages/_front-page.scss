@@ -1,0 +1,149 @@
+.home{
+  h1, h2{
+    font-family: 'SwiftNeueLTPro-Book';
+    font-weight: normal;
+    font-style: normal;
+  }
+  p{
+    font-family: 'DINNextLTPro-Light';
+    font-weight: normal;
+    font-style: normal;
+  }
+}
+
+
+.home--round-images{
+  .image-section{
+    .guy-round{
+      @apply absolute;
+      width:60%;
+      max-width:250px;
+      @screen md {
+        @apply relative;
+        width:55%;
+        max-width:100%;
+      }
+    }
+    .guy-round-1{
+      top:-25px;
+      left:10px;
+      @screen md {
+        left:25px;
+      }
+    }
+    .guy-round-2{
+      bottom:-25px;
+      right:-35px;
+      @screen md {
+        right:-40%;
+      }
+    }
+  }
+}
+
+.content-block-orange{
+  .copy-container{
+    @apply pt-60;
+    @screen md{
+      padding:100px 0;
+      @apply pr-60;
+    }
+  }
+  .image-container{
+    img{
+      position: relative;
+      bottom: 0;
+      width:100%;
+      @screen md{
+        position:absolute;
+        left:-25px;
+      }
+    }
+  }
+}
+
+.content-block-aqua{
+  .copy-container{
+    @apply pt-60;
+    @screen md{
+      padding:100px 0;
+      @apply px-60;
+    }
+  }
+  .image-container{
+    img{
+      position: relative;
+      bottom: 0;
+      @screen md{
+        position: absolute;
+        width:400px;
+        right:0;
+      }
+    }
+  }
+}
+
+// .featured-content{
+//   @screen md {
+//     min-height:350px;
+//   }
+//   .image-container{
+//     height:180px;
+//     @screen md{
+//       @apply relative h-full;
+//     }
+//   }
+//   .featured-article-image{
+//     @apply absolute;
+//     top:-25px;
+//     width:90%;
+//     left:50%;
+//     transform:translateX(-50%);
+//     max-width:325px;
+//     @screen md{
+//       top: 50%;
+//       // right: 0;
+//       transform: translateY(-50%);
+//       left: initial;
+//       width: 40%;
+//       max-width: initial;
+//       z-index: 5;
+//     }
+//   }
+// }
+
+//update
+.featured-content{
+  @screen md {
+    min-height:350px;
+  }
+  .image-container{
+    // height:180px;
+    position:relative;
+
+    @screen md{
+      @apply relative h-full;
+    }
+  }
+  .featured-article-image{
+    @apply relative;
+    margin:-5% 0;
+    // @apply absolute;
+    // top:-25px;
+    width:90%;
+    left:50%;
+    transform:translateX(-50%);
+    max-width:325px;
+    @screen md{
+      @apply absolute;
+      margin:0;
+      top: 50%;
+      // right: 0;
+      transform: translateY(-50%);
+      left: initial;
+      width: 40%;
+      max-width: initial;
+      z-index: 5;
+    }
+  }
+}

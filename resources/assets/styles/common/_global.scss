@@ -1,0 +1,79 @@
+.arbor-container{
+  overflow-x:hidden;
+  @screen md {
+    overflow:initial;
+  }
+}
+
+svg {
+  fill: transparent;
+}
+
+// Remove gutter from wp column blocks
+.colored-box-grandparent{
+  margin:0 !important;
+}
+.colored-box-parent{
+  flex-basis:initial !important;
+  margin:0 !important;
+}
+.colored-box-parent:not(:first-child){
+  margin-left:0 !important;
+}
+
+
+.responsive-spacer,
+.responsive-spacer.medium {
+  height: 25px;
+  margin: 0;
+
+  @screen sm {
+    height: 50px;
+  }
+}
+
+.responsive-spacer.small {
+  height: 15px;
+
+  @screen md {
+    height: 25px;
+  }
+}
+
+.responsive-spacer.large {
+  height: 50px;
+
+  @screen md {
+    height: 100px;
+  }
+}
+
+.responsive-spacer.extra-large {
+  height: 75px;
+
+  @screen md {
+    height: 125px;
+  }
+}
+
+// the_content specific styling for articles and sub-pages
+// make bolded font within articles look bolder
+.article-inner, .strategy-sub-inner{
+  strong{
+    @extend .dinn-med;
+  }
+
+  // bullet points for articles
+  ul{
+    list-style:initial;
+    margin-left:15px;
+  }
+}
+
+// fixes overflow issues
+.main{
+  overflow:hidden;
+  @screen md {
+    overflow:initial;
+  }
+}

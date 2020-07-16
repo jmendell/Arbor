@@ -1,0 +1,11 @@
+
+.search-form {
+
+  .search-field {
+    @apply bg-white text-arbor-navy p-5 w-auto mb-2 block w-full;
+  }
+
+  .search-submit {
+    @apply bg-arbor-navy text-white p-5 inline-block;
+  }
+}

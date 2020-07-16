@@ -1,0 +1,78 @@
+.single-article{
+  .article-inner{
+    @apply mx-6 pt-30 pb-75 text-arbor-navy;
+    @screen md {
+      @apply w-2/3 pt-60 my-0 mx-auto;
+    }
+
+    .article-title-container{
+      @apply mb-30;
+      @screen md {
+        @apply mb-60;
+      }
+
+      .article-title{
+        @apply text-3xl mb-4;
+        font-family: 'SwiftNeueLTPro-Book';
+        font-weight: normal;
+        font-style: normal;
+      }
+
+      .article-meta{
+        font-family: 'DINNextLTPro-Medium';
+        font-weight: normal;
+        font-style: normal;
+        .article-date{
+          @apply mr-2;
+        }
+        .article-category{
+          @apply text-arbor-aqua mr-2;
+        }
+      }
+    }
+
+    .article-content{
+      p{
+        @apply text-base mb-30;
+        font-family: 'DINNextLTPro-Light';
+        font-weight: normal;
+        font-style: normal;
+      }
+      a:not(.button--pill){
+        @apply text-arbor-aqua;
+        transition:.3s;
+        @screen md {
+          &:hover{
+            @apply text-arbor-navy;
+          }
+        }
+      }
+    }
+  }
+
+  .related-articles-container{
+    @apply mb-30;
+    @screen md {
+      @apply mb-60;
+    }
+  }
+
+}
+
+.nav-links {
+  @apply flex;
+
+  & > div {
+    flex: 1;
+  }
+
+  a {
+    @extend .button--pill;
+    @extend .button--navy;
+  }
+
+  @screen md {
+    .nav-next { text-align: right; }
+  }
+
+}

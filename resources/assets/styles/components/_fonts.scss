@@ -1,0 +1,90 @@
+@import url("//hello.myfonts.net/count/3a8ea5");
+
+/**
+ * @license
+ * MyFonts Webfont Build ID 3837605, 2019-11-15T16:39:54-0500
+ *
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are
+ * explicitly restricted from using the Licensed Webfonts(s).
+ *
+ * You may obtain a valid license at the URLs below.
+ *
+ * Webfont: SwiftNeueLTPro-Book by Linotype
+ * URL: https://www.myfonts.com/fonts/linotype/neue-swift/pro-book/
+ * Copyright: Copyright &#x00A9; 2009 Linotype GmbH, www.linotype.com. All rights reserved. This font software may not be reproduced, modified, disclosed or transferred without the express written approval of Linotype GmbH. Swift is a trademark of Linotype GmbH and may
+ * Licensed pageviews: 250,000
+ *
+ * Webfont: DINNextLTPro-Light by Linotype
+ * URL: https://www.myfonts.com/fonts/linotype/din-next/pro-light/
+ * Copyright: Copyright &#x00A9; 2010 Linotype GmbH, www.linotype.com. All rights reserved. This font software may not be reproduced, modified, disclosed or transferred without the express written approval of Linotype GmbH.
+ * Licensed pageviews: 500,000
+ *
+ * Webfont: DINNextLTPro-Regular by Linotype
+ * URL: https://www.myfonts.com/fonts/linotype/din-next/pro-regular/
+ * Copyright: Copyright &#x00A9; 2010 Linotype GmbH, www.linotype.com. All rights reserved. This font software may not be reproduced, modified, disclosed or transferred without the express written approval of Linotype GmbH.
+ * Licensed pageviews: 500,000
+ *
+ * Webfont: DINNextLTPro-Medium by Linotype
+ * URL: https://www.myfonts.com/fonts/linotype/din-next/pro-medium/
+ * Copyright: Copyright &#x00A9; 2010 Linotype GmbH, www.linotype.com. All rights reserved. This font software may not be reproduced, modified, disclosed or transferred without the express written approval of Linotype GmbH.
+ * Licensed pageviews: 500,000
+ *
+ *
+ *
+ * © 2019 MyFonts Inc
+*/
+
+
+@font-face {font-family: 'SwiftNeueLTPro-Book';src: url('../fonts/3A8EA5_0_0.eot');src: url('../fonts/3A8EA5_0_0.eot?#iefix') format('embedded-opentype'),url('../fonts/3A8EA5_0_0.woff2') format('woff2'),url('../fonts/3A8EA5_0_0.woff') format('woff'),url('../fonts/3A8EA5_0_0.ttf') format('truetype');}
+
+
+@font-face {font-family: 'DINNextLTPro-Light';src: url('../fonts/3A8EA5_1_0.eot');src: url('../fonts/3A8EA5_1_0.eot?#iefix') format('embedded-opentype'),url('../fonts/3A8EA5_1_0.woff2') format('woff2'),url('../fonts/3A8EA5_1_0.woff') format('woff'),url('../fonts/3A8EA5_1_0.ttf') format('truetype');}
+
+
+@font-face {font-family: 'DINNextLTPro-Regular';src: url('../fonts/3A8EA5_2_0.eot');src: url('../fonts/3A8EA5_2_0.eot?#iefix') format('embedded-opentype'),url('../fonts/3A8EA5_2_0.woff2') format('woff2'),url('../fonts/3A8EA5_2_0.woff') format('woff'),url('../fonts/3A8EA5_2_0.ttf') format('truetype');}
+
+
+@font-face {font-family: 'DINNextLTPro-Medium';src: url('../fonts/3A8EA5_3_0.eot');src: url('../fonts/3A8EA5_3_0.eot?#iefix') format('embedded-opentype'),url('../fonts/3A8EA5_3_0.woff2') format('woff2'),url('../fonts/3A8EA5_3_0.woff') format('woff'),url('../fonts/3A8EA5_3_0.ttf') format('truetype');}
+
+
+.swift-book {
+	font-family: 'SwiftNeueLTPro-Book';
+	font-weight: normal;
+	font-style: normal;
+}
+
+.dinn-light {
+	font-family: 'DINNextLTPro-Light';
+	font-weight: normal;
+	font-style: normal;
+}
+
+.dinn-reg {
+	font-family: 'DINNextLTPro-Regular';
+	font-weight: normal;
+	font-style: normal;
+}
+
+.dinn-med {
+	font-family: 'DINNextLTPro-Medium';
+	font-weight: normal;
+	font-style: normal;
+}
+
+h1,h2,h3,h4,h5,h6{
+  @apply leading-none;
+}
+
+body{
+	@extend .dinn-light;
+}
+
+.article-content {
+	h1, h2, h3 {
+		@apply mb-6 text-lg;
+    font-family: 'DINNextLTPro-Medium';
+    font-weight: normal;
+    font-style: normal;
+	}
+}

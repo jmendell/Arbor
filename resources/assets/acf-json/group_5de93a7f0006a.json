@@ -1,0 +1,48 @@
+{
+    "key": "group_5de93a7f0006a",
+    "title": "Callout - Title Text Link Image",
+    "fields": [
+        {
+            "key": "field_5de93a85c33c3",
+            "label": "Content",
+            "name": "content",
+            "type": "clone",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "clone": [
+                "field_5ddd60301f7ce",
+                "field_5ddd604d1f7cf",
+                "field_5ddd605a1f7d0",
+                "field_5ddd6ba840da6"
+            ],
+            "display": "seamless",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/team-text-graphic"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1575566032
+}

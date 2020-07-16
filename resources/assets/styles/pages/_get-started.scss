@@ -1,0 +1,158 @@
+.get-started{
+  @apply bg-arbor-navy;
+
+  .arbor-header{
+    @apply hidden;
+  }
+
+  footer{
+    @apply hidden;
+  }
+
+}
+
+.header--get-started {
+
+  .arbor-nav{
+    @apply flex justify-between items-center;
+  }
+
+  .get-started-logo{
+    width:50px;
+  }
+}
+
+.wp-block-bookly-form{
+  @apply px-6 mb-8;
+  @screen md {
+    max-width:1200px;
+    margin:0 auto;
+  }
+  .bookly-box{
+    overflow:initial;
+  }
+
+  // Text placed in 'title' section of Bookly backend --->
+  .bookly-page-title{
+    @apply text-center text-3xl text-arbor-aqua;
+    @extend .swift-book;
+  }
+
+  .colored-line{
+    height: 5px;
+    width: 50px;
+    text-align: center;
+    margin: 25px auto;
+    @screen md {
+      margin: 25px auto;
+    }
+  }
+
+  .bookly-title-copy{
+    @apply text-white text-center;
+    @screen md {
+      @apply w-1/2 my-0 mx-auto;
+    }
+  }
+
+  // Text placed in 'title' section of Bookly backend --->
+
+  // center services dropdown
+  .bookly-mobile-step-1{
+    @apply text-center;
+  }
+
+  select{
+    color:$navy;
+    @extend .dinn-med;
+    @screen md {
+      max-width:600px;
+      margin:0 auto;
+    }
+    option{
+      @extend .dinn-med;
+    }
+  }
+
+  .bookly-nav-steps{
+    border:none !important;
+    max-width:600px;
+    margin:0 auto;
+  }
+
+  .bookly-details-step{
+    max-width:800px;
+    margin:0 auto;
+  }
+
+  // form styles
+  .bookly-table:nth-child(2){
+    @apply flex flex-col;
+  }
+
+  input, textarea{
+    background:rgba(255,255,255,.1);
+    color:white;
+  }
+
+  // time picker styles
+  .bookly-hour{
+    margin:5px 0 !important;
+    background-color:transparent !important;
+    .bookly-time-main{
+      color:white !important;
+      .bookly-hour-icon{
+        display: none;
+      }
+    }
+  }
+
+  .button--pill{
+    margin-top:25px;
+  }
+
+}
+
+.gs {
+  text-align: center;
+  display: none;
+
+  .related-articles-container {
+    background: transparent;
+  }
+
+  .related-articles-title-container {
+    display: block;
+  }
+
+  .related-articles-container .related-articles-inner {
+    flex-direction: column;
+  }
+
+  .related-container-title {
+    color: $aqua;
+    text-align: center;
+  }
+
+  .related-articles-inner .single-article__related {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto 35px; 
+  }
+
+  .related-title {
+    line-height: 30px;
+  }
+
+  .related-articles {
+    display: none;
+  }
+
+  a {
+    color: $med_gray;
+
+    &:hover {
+      color: $aqua;
+    }
+  }
+}

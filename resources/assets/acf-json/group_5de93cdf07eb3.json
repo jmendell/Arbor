@@ -1,0 +1,46 @@
+{
+    "key": "group_5de93cdf07eb3",
+    "title": "Featured Article",
+    "fields": [
+        {
+            "key": "field_5de93ce57810c",
+            "label": "Article",
+            "name": "article",
+            "type": "post_object",
+            "instructions": "Article must have Featured Image set for the image portion to show up on front-end.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "post"
+            ],
+            "taxonomy": "",
+            "allow_null": 0,
+            "multiple": 0,
+            "return_format": "object",
+            "ui": 1
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/featured-article-callout"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1575934509
+}

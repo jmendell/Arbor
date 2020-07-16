@@ -1,0 +1,38 @@
+.login-link-container{
+  @apply absolute z-50 hidden;
+  top:80%;
+  right:5%;
+  &:after{
+    content:'';
+    background-color: $aqua;
+    position: absolute;
+    right:8%;
+    top:-8px;
+    height:16px;
+    width:16px;
+    z-index:11;
+    transform:rotate(-45deg);
+
+  }
+  .login-links{
+    @apply py-6 px-10 bg-arbor-aqua text-center text-base text-arbor-navy uppercase;
+    @extend .dinn-med;
+    .single-link{
+      @apply tracking-widest;
+    }
+    .single-link:nth-child(2){
+      @apply my-2;
+    }
+  }
+}
+
+.login-links--mobile{
+  @apply py-6 mb-4 bg-arbor-aqua text-center text-base text-arbor-navy uppercase hidden;
+  @extend .dinn-med;
+  .single-link{
+    @apply tracking-widest;
+  }
+  .single-link:nth-child(2){
+    @apply my-4;
+  }
+}

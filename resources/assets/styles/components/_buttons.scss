@@ -1,0 +1,84 @@
+.button--pill{
+  @apply pb-3 px-8 rounded-full text-sm uppercase tracking-wider;
+  padding-top:.9rem;
+  @extend .dinn-med;
+  &.button--aqua{
+    @apply bg-arbor-aqua text-white;
+    border:2px solid $aqua;
+    &.header-button{
+      @apply px-6 pb-2 pt-3;
+    }
+  }
+  &.button-flex{
+    padding-bottom:.6rem;
+    padding-top:.75rem;
+  }
+  &.button--white{
+    @apply bg-white text-black;
+    border: 2px solid white;
+  }
+  &.button--navy{
+    @apply bg-arbor-navy text-white;
+    border: 2px solid $navy;
+  }
+}
+
+.btn-hover--navy{
+  transition: background-color .3s, bottom .5s ease, border-color .3s ease, color .3s ease;
+  @screen md {
+    &:hover{
+      background:transparent;
+      color: $navy;
+      border-color:$navy;
+    }
+  }
+}
+
+.btn-hover--aqua{
+  transition: background-color .3s, bottom .5s ease;
+  @screen md {
+    &:hover{
+      background-color:transparent;
+      color: $aqua;
+      border-color:$aqua;
+    }
+  }
+}
+
+.btn-hover--white{
+  transition: background-color .3s ease, color .3s ease, border .3s ease, bottom .5s ease;
+  @screen md {
+    &:hover{
+      background-color:transparent;
+      color: white;
+      border-color:white;
+    }
+  }
+}
+
+.text-hover--navy{
+  transition: color .3s;
+  @screen md {
+    &:hover{
+      color: $navy;
+    }
+  }
+}
+
+.text-hover--white{
+  transition: color .3s;
+  @screen md {
+    &:hover{
+      color: white;
+    }
+  }
+}
+
+.text-hover--aqua{
+  transition: color .3s;
+  @screen md {
+    &:hover{
+      color: $aqua;
+    }
+  }
+}

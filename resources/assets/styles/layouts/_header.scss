@@ -1,0 +1,84 @@
+header{
+  min-height:100px;
+  @apply py-6 px-4;
+  @screen md {
+    @apply p-8;
+  }
+  .arbor-nav{
+    .logo-container{
+      flex:1;
+      .logo-full{
+        width:150px;
+        @screen md {
+          width:175px;
+        }
+      }
+    }
+    .main-nav-items{
+      flex:2;
+      justify-content:space-evenly;
+      // IE fixes
+      @media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {
+        justify-content:space-around !important;
+      }
+      // Edge fixes
+      @supports (-ms-ime-align:auto) {
+        justify-content:space-around !important;
+      }
+    }
+
+    .nav-action-buttons{
+      flex:1;
+      justify-content:space-evenly;
+
+      // IE fixes
+      @supports (-ms-ime-align:auto) {
+        justify-content:space-around !important;
+      }
+      // Edge fixes
+      @media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {
+        justify-content:space-around !important;
+      }
+
+      a{
+        &:first-child{
+          @extend .btn-hover--aqua;
+          border:2px solid $aqua;
+        }
+        &:nth-child(2){
+          @extend .text-hover--navy;
+        }
+      }
+    }
+
+    .mobile-menu-icon-container{
+      flex: 1;
+      display: flex;
+      justify-content: flex-end;
+      @screen lg {
+        @apply hidden;
+      }
+      .mobile-menu-icon{
+        width:6px;
+      }
+      .close{
+        @apply hidden;
+        font-size:50px;
+        line-height:.5;
+      }
+    }
+  }
+
+}
+
+.secondary-nav {
+  & > a:first-child {
+    @extend .button--pill;
+    @extend .button--aqua;
+    @extend .header-button;
+  }
+
+  & > a[href^="#"]{
+    @apply text-arbor-aqua uppercase tracking-wider;
+  }
+}

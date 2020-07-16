@@ -1,0 +1,113 @@
+.strategy-sub-inner{
+  @apply mx-6 py-30 text-arbor-navy;
+  @screen md {
+    @apply w-2/3 py-60 my-0 mx-auto;
+  }
+
+  .main-content-container{
+    // @apply mb-120;
+    .sub-title{
+      @apply text-3xl mb-4;
+      font-family: 'SwiftNeueLTPro-Book';
+      font-weight: normal;
+      font-style: normal;
+    }
+    .sub-content{
+      @apply mb-60;
+      p{
+        @apply text-base mb-30;
+        font-family: 'DINNextLTPro-Light';
+        font-weight: normal;
+        font-style: normal;
+      }
+    }
+  }
+
+  .key-thoughts-container{
+    @apply mb-30;
+    @screen md {
+      @apply mb-120;
+    }
+    .thoughts-title{
+      @apply mb-30;
+    }
+    .key-thoughts-list{
+      column-count: 1;
+      column-fill:balance;
+      @screen md {
+        column-count: 2;
+      }
+      .list-item{
+        @apply my-6;
+        page-break-inside: avoid;
+        border-left: 5px solid $orange;
+        padding-left: 15px;
+        @screen md {
+          display: inline-block;
+        }
+      }
+    }
+  }
+
+   .related-articles--full-width{
+    @apply bg-arbor-light_gray flex flex-col px-10 py-10 my-0 mx-auto;
+    @screen md {
+      @apply px-16;
+    }
+
+    .related-container-title{
+      @apply uppercase mb-6;
+      font-family: 'DINNextLTPro-Medium';
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    .related-articles-inner{
+      @apply flex flex-col;
+
+      .single-article__related{
+        @apply pb-10;
+        &:last-child{
+          @apply pb-0;
+        }
+        .related-title{
+          @apply mb-4;
+          font-family: 'SwiftNeueLTPro-Book';
+          font-weight: normal;
+          font-style: normal;
+        }
+        .related-excerpt{
+          @apply mb-6;
+          font-family: 'DINNextLTPro-Light';
+          font-weight: normal;
+          font-style: normal;
+        }
+      }
+    }
+
+  }
+}
+
+.more-strategy-container{
+  .more-items{
+    @apply w-3/5 flex-col;
+    @screen smd {
+      @apply w-4/5 flex-row;
+    }
+  }
+  .more-item-single{
+    @apply text-center py-30 text-arbor-aqua uppercase;
+    border-bottom:2px solid white;
+    @screen smd {
+      @apply px-30;
+      border-bottom:none;
+      border-right:2px solid white;
+    }
+    a{
+      @apply block;
+    }
+    &:last-child{
+      border:none;
+    }
+  }
+}

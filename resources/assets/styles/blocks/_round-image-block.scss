@@ -1,0 +1,36 @@
+.round-images{
+  .image-section{
+    .round-image-single{
+      @apply flex justify-center bg-arbor-light_gray absolute overflow-hidden;
+      border-radius: 250px;
+      width: 250px;
+      height: 250px;
+
+      @screen md {
+        @apply relative;
+        width: 300px;
+        height: 300px;
+      }
+
+      &:first-child{
+        top:-25px;
+        left:10px;
+        @screen md {
+          left:25px;
+        }
+      }
+      &:last-child{
+        bottom:-25px;
+        right:-35px;
+        @screen md {
+          right:-40%;
+        }
+      }
+      .guy-round{
+        width: 70%;
+        position: absolute;
+        bottom: 0%;
+      }
+    }
+  }
+}

@@ -1,0 +1,72 @@
+{
+    "key": "group_5ddd9b88106cb",
+    "title": "Text Callout",
+    "fields": [
+        {
+            "key": "field_5ddd9e1895237",
+            "label": "Text Callout Backround Color",
+            "name": "text_callout_backround_color",
+            "type": "select",
+            "instructions": "If the text callout needs a background color.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "white": "white",
+                "aqua": "aqua"
+            },
+            "default_value": [],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_5ddd9ca2e8ec1",
+            "label": "Callout Content",
+            "name": "callout_content",
+            "type": "clone",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "clone": [
+                "field_5ddd60301f7ce",
+                "field_5ddd604d1f7cf",
+                "field_5ddd605a1f7d0"
+            ],
+            "display": "seamless",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/callout-text"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1575571029
+}
